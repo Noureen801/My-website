@@ -15,38 +15,7 @@ const SITE = {
   cvFile: "assets/Noreen_Aslam_CV.pdf",      // [PLACEHOLDER] place your CV PDF here
   profilePhoto: "assets/images/Noureen-Digital-Profile.png"   // [PLACEHOLDER] if missing, NA monogram is shown
 };
-const certificates = [
-  {
-    title: "Creative Writing Certificate",
-    file: "assets/Creative Writing Certificate.pdf",
-    image: "assets/creative-writing.png"
-  },
-  {
-    title: "Freelancing Certificate",
-    file: "assets/Freelancing Certificate.pdf",
-    image: "assets/freelancing.png"
-  },
-  {
-    title: "Marketing Benefits Certificate",
-    file: "assets/Marketing Benefits certificate.pdf",
-    image: "assets/marketing-benefits.png"
-  },
-  {
-    title: "SEO Certificate",
-    file: "assets/SEO Certificate.pdf",
-    image: "assets/seo.png"
-  },
-  {
-    title: "Social Media Marketing Certificate",
-    file: "assets/Social media marketing certificate.pdf",
-    image: "assets/social-media-marketing.png"
-  },
-  {
-    title: "Digital Marketing Certificate",
-    file: "assets/6th-file-ka-naam.pdf",
-    image: "assets/6th-image.png"
-  }
-];
+
 
 const HERO = {
   heading: "<h4>Helping Businesses To Grow Them Through Digital marketing, SEO, Content Writing  & Social media management</h4>",
@@ -369,7 +338,7 @@ const EDUCATION = [
    Until a preview image exists, the card shows a plain "Preview image not added yet" tile. */
 const CERTIFICATES = [
   { title: "Digital Marketing", category: "Digital Marketing", provider: "DigiSkills.pk / Ignite (Virtual University)", date: "Issued 24 October 2024", id: "3ABEYMMK5",
-    pdf: "assets/certificates/digital-marketing.pdf", image: "assets/certificates/previews/digital-marketing.jpg" },
+    pdf: "assets/digital-marketing.pdf", image: "assets/certificates/previews/digital-marketing.png" },
   { title: "Freelancing", category: "Professional Freelancing", provider: "DigiSkills.pk / Ignite (Virtual University)", date: "Issued 24 October 2024", id: "G2EPBAKMK",
     pdf: "assets/certificates/freelancing.pdf", image: "assets/certificates/previews/freelancing.jpg" },
   { title: "SEO (Search Engine Optimization)", category: "SEO", provider: "DigiSkills.pk / Ignite (Virtual University)", date: "Issued 14 March 2026", id: "9YTNPNYMK",
