@@ -540,6 +540,96 @@ const PRICING = [
         audience: "Brands that want a complete social media plan and ongoing monthly planning."
       }
     ]
+  },
+  {
+    service: "Profile Optimization",
+    intro: "Clear, complete and consistent profiles on Instagram, LinkedIn, Facebook and Google Business Profile, so visitors quickly understand who you are and what to do next.",
+    packages: [
+      {
+        tier: "Basic", name: "Profile Starter",
+        pkr: "PKR [Your Price]", usd: "$ [Your Price]", from: true,
+        duration: "[Your duration]",
+        deliverables: [
+          "Profile audit for [number] platform(s) (Instagram, LinkedIn, Facebook or Google Business Profile)",
+          "Rewritten bio, headline or about text for each profile",
+          "Call-to-action and keyword suggestions",
+          "Action checklist you can follow"
+        ],
+        audience: "Freelancers, professionals and small businesses with one main profile to improve."
+      },
+      {
+        tier: "Medium", name: "Profile Growth",
+        pkr: "PKR [Your Price]", usd: "$ [Your Price]", from: true,
+        duration: "[Your duration]",
+        deliverables: [
+          "Everything in Profile Starter",
+          "Optimization for [number] platforms",
+          "Instagram bio, highlights and grid layout guidance",
+          "Facebook page info, about section and call-to-action button setup",
+          "Google Business Profile categories, description and services",
+          "[Number] revision round(s)"
+        ],
+        audience: "Businesses and personal brands that are active on two or three platforms."
+      },
+      {
+        tier: "Premium", name: "Profile Complete",
+        pkr: "PKR [Your Price]", usd: "$ [Your Price]", from: true,
+        duration: "[Your duration]",
+        deliverables: [
+          "Everything in Profile Growth",
+          "All four platforms: Instagram, LinkedIn, Facebook and Google Business Profile",
+          "Full LinkedIn review (headline, About, experience, skills and featured section)",
+          "Consistent branding and tone recommendations across all profiles",
+          "Review call to walk through the changes"
+        ],
+        audience: "Brands and professionals who want every public profile to look consistent and complete."
+      }
+    ]
+  },
+  {
+    service: "Social Media Management",
+    intro: "Ongoing help with planning, writing and posting, so your social media accounts stay active and organized.",
+    packages: [
+      {
+        tier: "Basic", name: "Management Starter",
+        pkr: "PKR [Your Price]", usd: "$ [Your Price]", from: true,
+        duration: "[Your duration, e.g. per month]",
+        deliverables: [
+          "Content planning for [number] platform(s)",
+          "Content calendar for [number] posts per month",
+          "Captions for each planned post",
+          "Post scheduling",
+          "Monthly report"
+        ],
+        audience: "Small businesses and creators who want to post regularly on one platform."
+      },
+      {
+        tier: "Medium", name: "Management Growth",
+        pkr: "PKR [Your Price]", usd: "$ [Your Price]", from: true,
+        duration: "[Your duration, e.g. per month]",
+        deliverables: [
+          "Everything in Management Starter",
+          "Content planning and scheduling for [number] platforms",
+          "[Number] posts per month with captions and calls to action",
+          "Replies to comments and messages during agreed hours",
+          "Monthly report with a summary of activity and engagement"
+        ],
+        audience: "Businesses that post regularly and want comments and messages handled."
+      },
+      {
+        tier: "Premium", name: "Management Complete",
+        pkr: "PKR [Your Price]", usd: "$ [Your Price]", from: true,
+        duration: "[Your duration, e.g. per month]",
+        deliverables: [
+          "Everything in Management Growth",
+          "Monthly content strategy and planning session",
+          "Platform-by-platform content plan",
+          "[Number] posts per month across all agreed platforms",
+          "Detailed monthly report with suggestions for the next month"
+        ],
+        audience: "Brands that want full social media planning and day-to-day management."
+      }
+    ]
   }
 ];
 

@@ -348,7 +348,7 @@ function priceCard(svc, p) {
 
 function renderPricing() {
   const filters = ["All", ...PRICING.map(s => s.service)];
-  return `${pageHead("Pricing", "Service Packages & Pricing", "Clear packages for SEO, Local SEO, Content Writing and Social Media Marketing. Every package lists what is included, and you can ask for a custom plan if your needs are different.", `<a href="#/">Home</a> / Pricing`)}
+  return `${pageHead("Pricing", "Service Packages & Pricing", "Clear packages for SEO, Local SEO, Content Writing, Social Media Marketing, Profile Optimization and Social Media Management. Every package lists what is included, and you can ask for a custom plan if your needs are different.", `<a href="#/">Home</a> / Pricing`)}
   <section>
     <div class="container">
       <div class="card price-note mb-30"><p class="flush"><strong>How pricing works.</strong> ${PRICING_NOTE}</p></div>
@@ -431,7 +431,7 @@ const ROUTES = [
   { re: /^\/about$/, render: renderAbout, title: "About | Noureen Aslam", desc: "About Noureen Aslam, a research-driven digital marketing professional." },
   { re: /^\/services$/, render: renderServicesIndex, title: "Services | Noreen Aslam", desc: "SEO, local SEO, content writing and social media services." },
   { re: /^\/services\/([a-z-]+)$/, render: (m) => renderCategory(m[1]), title: "Services | Noureen Aslam", desc: "Detailed service list for Noureen Aslam." },
-  { re: /^\/pricing$/, render: renderPricing, title: "Pricing | Noureen Aslam", desc: "Service packages for SEO, local SEO, content writing and social media marketing, with a custom plan option." },
+  { re: /^\/pricing$/, render: renderPricing, title: "Pricing | Noureen Aslam", desc: "Service packages for SEO, local SEO, content writing, social media marketing, profile optimization and social media management, with a custom plan option." },
   { re: /^\/portfolio$/, render: renderPortfolio, title: "Portfolio | Noureen Aslam", desc: "Sample SEO, local SEO, content and social media projects. Demo projects are labeled." },
   { re: /^\/portfolio\/([a-z-]+)$/, render: (m) => renderCase(m[1]), title: "Case Study | Noureen Aslam", desc: "Case study by Noureen Aslam." },
   { re: /^\/experience$/, render: renderExperience, title: "Experience | Noureen Aslam", desc: "Internship experience in SEO and digital marketing." },
