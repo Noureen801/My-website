@@ -284,15 +284,95 @@ function renderEducation() {
         ${EDUCATION.map(e => `<div class="card"><h3>${e.degree}</h3><p class="muted flush">${e.school}</p>${e.dates ? `<p class="muted">${e.dates}</p>` : ""}</div>`).join("")}
       </div>
       <h2>Certifications</h2>
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th scope="col">Certificate</th><th scope="col">Area</th><th scope="col">Provider</th><th scope="col">Date</th><th scope="col">Certificate ID</th></tr></thead>
-          <tbody>
-            ${CERTIFICATES.map(c => `<tr><td>${c.title}</td><td>${c.category}</td><td>${c.provider}</td><td>${c.date}</td><td>${c.id}</td></tr>`).join("")}
-          </tbody>
-        </table>
+      <p class="muted mb-24">Select a certificate image for a larger preview, or open the original PDF.</p>
+      <div class="cert-grid">
+        ${CERTIFICATES.map(certCard).join("")}
       </div>
 
+    </div>
+  </section>`;
+}
+
+function certCard(c, i) {
+  const idText = /^serial/i.test(c.id) ? c.id : `Certificate ID: ${c.id}`;
+  return `<article class="cert-card">
+    <button type="button" class="cert-thumb" data-lightbox="${i}" aria-label="Open larger preview of the ${c.title} certificate">
+      <img data-cert src="${c.image}" alt="${c.title} certificate from ${c.provider}" loading="lazy" />
+      <span class="cert-fallback" aria-hidden="true">Preview image not added yet</span>
+    </button>
+    <div class="cert-body">
+      <span class="tag">${c.category}</span>
+      <h3>${c.title}</h3>
+      <p class="muted flush">${c.provider}</p>
+      <p class="muted cert-date">${c.date}</p>
+      <p class="cert-id">${idText}</p>
+      <div class="cert-actions">
+        <a class="btn btn-gold" href="${c.pdf}" target="_blank" rel="noopener">View Certificate</a>
+        <a class="btn btn-outline" href="${c.pdf}" download>Download Certificate</a>
+      </div>
+    </div>
+  </article>`;
+}
+
+/* ---------- Pricing ---------- */
+
+/* Wraps [bracketed placeholders] in a highlight so they are easy to spot and replace. */
+function phText(s) {
+  return s.replace(/\[[^\]]+\]/g, m => `<span class="placeholder">${m}</span>`);
+}
+
+function priceCard(svc, p) {
+  const isCustom = p.tier === "Custom";
+  const waMsg = `Hello Noreen, I would like a quote for the ${isCustom ? "custom plan" : `${p.name} package`} (${svc}).`;
+  return `<article class="card price-card${isCustom ? " price-card-custom" : ""}">
+    <p class="price-tier">${p.tier}</p>
+    <p class="price-service-name">${svc}</p>
+    <h3>${p.name}</h3>
+    <div class="price-box">
+      ${p.from ? `<span class="price-from">Starting from</span>` : ""}
+      <span class="price">${phText(p.pkr)}</span>
+      ${p.usd ? `<span class="price-usd">${phText(p.usd)}</span>` : ""}
+    </div>
+    <p class="label">Duration</p>
+    <p class="muted">${phText(p.duration)}</p>
+    <p class="label">What is included</p>
+    <ul class="price-list">${p.deliverables.map(d => `<li>${phText(d)}</li>`).join("")}</ul>
+    <p class="label">Suitable for</p>
+    <p class="muted">${p.audience}</p>
+    <div class="price-actions">
+      <a class="btn btn-gold" href="${SITE.calendly}" target="_blank" rel="noopener">Get a Quote</a>
+      <a class="btn btn-outline" href="${waLink(waMsg)}" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </article>`;
+}
+
+function renderPricing() {
+  const filters = ["All", ...PRICING.map(s => s.service)];
+  return `${pageHead("Pricing", "Service Packages & Pricing", "Clear packages for SEO, Local SEO, Content Writing and Social Media Marketing. Every package lists what is included, and you can ask for a custom plan if your needs are different.", `<a href="#/">Home</a> / Pricing`)}
+  <section>
+    <div class="container">
+      <div class="card price-note mb-30"><p class="flush"><strong>How pricing works.</strong> ${PRICING_NOTE}</p></div>
+      <div class="filters" role="group" aria-label="Filter packages by service">
+        ${filters.map((f, i) => `<button class="filter-btn" type="button" data-price-filter="${f}" aria-pressed="${i === 0}">${f}</button>`).join("")}
+      </div>
+      ${PRICING.map(s => `
+        <div class="price-service" data-service="${s.service}">
+          <h2>${s.service}</h2>
+          <p class="muted price-intro">${s.intro}</p>
+          <div class="grid grid-4 price-grid">
+            ${[...s.packages, CUSTOM_PLAN].map(p => priceCard(s.service, p)).join("")}
+          </div>
+        </div>`).join("")}
+    </div>
+  </section>
+  <section class="section-alt">
+    <div class="container text-center">
+      <h2>Not sure which package fits?</h2>
+      <p class="lead lead-center">Book a call and tell me about your business. We can choose a package together or build a custom plan.</p>
+      <div class="btn-group btn-group-center">
+        <a class="btn btn-gold" href="${SITE.calendly}" target="_blank" rel="noopener">Book a Call on Calendly</a>
+        <a class="btn btn-whatsapp" href="${waLink("Hello Noreen, I visited your pricing page and would like to discuss a package.")}" target="_blank" rel="noopener">WhatsApp Me</a>
+      </div>
     </div>
   </section>`;
 }
@@ -351,6 +431,7 @@ const ROUTES = [
   { re: /^\/about$/, render: renderAbout, title: "About | Noureen Aslam", desc: "About Noureen Aslam, a research-driven digital marketing professional." },
   { re: /^\/services$/, render: renderServicesIndex, title: "Services | Noreen Aslam", desc: "SEO, local SEO, content writing and social media services." },
   { re: /^\/services\/([a-z-]+)$/, render: (m) => renderCategory(m[1]), title: "Services | Noureen Aslam", desc: "Detailed service list for Noureen Aslam." },
+  { re: /^\/pricing$/, render: renderPricing, title: "Pricing | Noureen Aslam", desc: "Service packages for SEO, local SEO, content writing and social media marketing, with a custom plan option." },
   { re: /^\/portfolio$/, render: renderPortfolio, title: "Portfolio | Noureen Aslam", desc: "Sample SEO, local SEO, content and social media projects. Demo projects are labeled." },
   { re: /^\/portfolio\/([a-z-]+)$/, render: (m) => renderCase(m[1]), title: "Case Study | Noureen Aslam", desc: "Case study by Noureen Aslam." },
   { re: /^\/experience$/, render: renderExperience, title: "Experience | Noureen Aslam", desc: "Internship experience in SEO and digital marketing." },
@@ -386,6 +467,7 @@ function route() {
     if (m) { html = r.render(m); meta = r; break; }
   }
   if (!html) { html = renderNotFound(); meta = { title: "Not found | Noureen Aslam", desc: "Page not found." }; }
+  closeLightbox();
   app.innerHTML = html;
   setMeta(meta.title, meta.desc);
   setActiveNav(path);
@@ -410,6 +492,16 @@ function bindPage(path) {
         if (show) visible++;
       });
       $("#no-results").hidden = visible > 0;
+    }));
+  }
+  if (path === "/pricing") {
+    const buttons = document.querySelectorAll("[data-price-filter]");
+    buttons.forEach(btn => btn.addEventListener("click", () => {
+      const f = btn.dataset.priceFilter;
+      buttons.forEach(b => b.setAttribute("aria-pressed", String(b === btn)));
+      document.querySelectorAll(".price-service").forEach(sec => {
+        sec.style.display = (f === "All" || sec.dataset.service === f) ? "" : "none";
+      });
     }));
   }
   if (path === "/contact") bindContactForm();
@@ -480,6 +572,109 @@ function handlePhotoErrors() {
   });
 }
 handlePhotoErrors();
+
+/* ---------- Certificate previews and lightbox ---------- */
+
+/* If a preview image has not been uploaded yet, show a plain tile instead of a broken image. */
+document.addEventListener("error", (e) => {
+  const t = e.target;
+  if (t.matches && t.matches("img[data-cert]")) {
+    const btn = t.closest(".cert-thumb");
+    if (btn) { btn.classList.add("cert-missing"); btn.disabled = true; }
+    t.remove();
+  }
+}, true);
+
+let lbOpener = null;
+let lbCurrent = -1;
+
+function ensureLightbox() {
+  let lb = document.getElementById("lightbox");
+  if (lb) return lb;
+  lb = document.createElement("div");
+  lb.id = "lightbox";
+  lb.className = "lightbox";
+  lb.hidden = true;
+  lb.setAttribute("role", "dialog");
+  lb.setAttribute("aria-modal", "true");
+  lb.setAttribute("aria-label", "Certificate preview");
+  lb.innerHTML = `<div class="lb-inner">
+    <button type="button" class="lb-close" aria-label="Close preview">&times;</button>
+    <button type="button" class="lb-nav lb-prev" aria-label="Previous certificate">&#8249;</button>
+    <figure class="lb-figure">
+      <img id="lb-img" alt="" />
+      <figcaption id="lb-cap"></figcaption>
+    </figure>
+    <button type="button" class="lb-nav lb-next" aria-label="Next certificate">&#8250;</button>
+  </div>`;
+  document.body.appendChild(lb);
+  lb.addEventListener("click", (e) => {
+    if (e.target === lb || e.target.closest(".lb-close")) closeLightbox();
+    else if (e.target.closest(".lb-prev")) stepLightbox(-1);
+    else if (e.target.closest(".lb-next")) stepLightbox(1);
+  });
+  return lb;
+}
+
+function showLightbox(i) {
+  const c = CERTIFICATES[i];
+  if (!c) return;
+  lbCurrent = i;
+  const img = document.getElementById("lb-img");
+  img.src = c.image;
+  img.alt = `${c.title} certificate from ${c.provider}`;
+  document.getElementById("lb-cap").innerHTML =
+    `<strong>${c.title}</strong><span>${c.provider} | ${c.date}</span>
+     <a class="btn btn-gold" href="${c.pdf}" target="_blank" rel="noopener">View Certificate</a>`;
+}
+
+function openLightbox(i, opener) {
+  const lb = ensureLightbox();
+  lbOpener = opener || null;
+  showLightbox(i);
+  lb.hidden = false;
+  document.body.classList.add("lb-open");
+  lb.querySelector(".lb-close").focus();
+}
+
+function closeLightbox() {
+  const lb = document.getElementById("lightbox");
+  if (!lb || lb.hidden) return;
+  lb.hidden = true;
+  document.body.classList.remove("lb-open");
+  if (lbOpener && document.contains(lbOpener)) lbOpener.focus();
+  lbOpener = null;
+}
+
+/* Previous/next only visit certificates whose preview image actually loaded. */
+function stepLightbox(dir) {
+  const ids = [...document.querySelectorAll(".cert-thumb:not(.cert-missing)")].map(b => Number(b.dataset.lightbox));
+  if (ids.length < 2) return;
+  const pos = ids.indexOf(lbCurrent);
+  showLightbox(ids[(pos + dir + ids.length) % ids.length]);
+}
+
+document.addEventListener("click", (e) => {
+  const btn = e.target.closest && e.target.closest("[data-lightbox]");
+  if (btn && !btn.disabled) openLightbox(Number(btn.dataset.lightbox), btn);
+});
+
+document.addEventListener("keydown", (e) => {
+  const lb = document.getElementById("lightbox");
+  if (!lb || lb.hidden) return;
+  if (e.key === "Escape") closeLightbox();
+  else if (e.key === "ArrowLeft") stepLightbox(-1);
+  else if (e.key === "ArrowRight") stepLightbox(1);
+  else if (e.key === "Tab") {
+    // Keep keyboard focus inside the open preview.
+    const f = [...lb.querySelectorAll("button, a[href]")].filter(el => el.offsetParent !== null);
+    if (!f.length) return;
+    const first = f[0], last = f[f.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  }
+});
+
 document.getElementById("cv-float").href = SITE.cvFile;
 
 document.getElementById("year").textContent = new Date().getFullYear();

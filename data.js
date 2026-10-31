@@ -11,6 +11,7 @@ const SITE = {
   whatsappNumber: "923476792159",
   whatsappLink: "https://wa.me/923476792159",
   location: "Gujranwala, Punjab, Pakistan",
+  calendly: "https://calendly.com/noureenaslam73",
   cvFile: "assets/Noreen_Aslam_CV.pdf",      // [PLACEHOLDER] place your CV PDF here
   profilePhoto: "assets/images/Noureen-Digital-Profile.png"   // [PLACEHOLDER] if missing, NA monogram is shown
 };
@@ -330,14 +331,230 @@ const EDUCATION = [
   { degree: "F.Sc Pre-Medical", school: "Punjab College for Women, Gujranwala", dates: "" }
 ];
 
+/* Each certificate needs two files you upload yourself:
+   pdf   = the ORIGINAL certificate PDF (opened by "View Certificate", saved by "Download Certificate")
+   image = a JPG preview of that same PDF (shown in the gallery and the lightbox)
+   Until a preview image exists, the card shows a plain "Preview image not added yet" tile. */
 const CERTIFICATES = [
-  { title: "Digital Marketing", category: "Digital Marketing", provider: "DigiSkills.pk / Ignite (Virtual University)", date: "Issued 24 October 2024", id: "3ABEYMMK5" },
-  { title: "Freelancing", category: "Professional Freelancing", provider: "DigiSkills.pk / Ignite (Virtual University)", date: "Issued 24 October 2024", id: "G2EPBAKMK" },
-  { title: "SEO (Search Engine Optimization)", category: "SEO", provider: "DigiSkills.pk / Ignite (Virtual University)", date: "Issued 14 March 2026", id: "9YTNPNYMK" },
-  { title: "Creative Writing", category: "Content Writing", provider: "DigiSkills.pk / Ignite (Virtual University)", date: "Issued 14 March 2026", id: "JSZWMH9MK" },
-  { title: "Social Media Marketing", category: "Social Media Marketing", provider: "HP LIFE / HP Foundation", date: "Presented 28 May 2025", id: "Serial: 38746014-3e54-44d9-9ffc-849ae49cc951" },
-  { title: "Marketing Benefits vs. Features", category: "Digital Marketing", provider: "HP LIFE / HP Foundation", date: "Presented 17 June 2025", id: "Serial: a4dc68d0-dd3f-44dc-893a-58b09f8825aa" }
+  { title: "Digital Marketing", category: "Digital Marketing", provider: "DigiSkills.pk / Ignite (Virtual University)", date: "Issued 24 October 2024", id: "3ABEYMMK5",
+    pdf: "assets/certificates/digital-marketing.pdf", image: "assets/certificates/previews/digital-marketing.jpg" },
+  { title: "Freelancing", category: "Professional Freelancing", provider: "DigiSkills.pk / Ignite (Virtual University)", date: "Issued 24 October 2024", id: "G2EPBAKMK",
+    pdf: "assets/certificates/freelancing.pdf", image: "assets/certificates/previews/freelancing.jpg" },
+  { title: "SEO (Search Engine Optimization)", category: "SEO", provider: "DigiSkills.pk / Ignite (Virtual University)", date: "Issued 14 March 2026", id: "9YTNPNYMK",
+    pdf: "assets/certificates/seo.pdf", image: "assets/certificates/previews/seo.jpg" },
+  { title: "Creative Writing", category: "Content Writing", provider: "DigiSkills.pk / Ignite (Virtual University)", date: "Issued 14 March 2026", id: "JSZWMH9MK",
+    pdf: "assets/certificates/creative-writing.pdf", image: "assets/certificates/previews/creative-writing.jpg" },
+  { title: "Social Media Marketing", category: "Social Media Marketing", provider: "HP LIFE / HP Foundation", date: "Presented 28 May 2025", id: "Serial: 38746014-3e54-44d9-9ffc-849ae49cc951",
+    pdf: "assets/certificates/social-media-marketing.pdf", image: "assets/certificates/previews/social-media-marketing.jpg" },
+  { title: "Marketing Benefits vs. Features", category: "Digital Marketing", provider: "HP LIFE / HP Foundation", date: "Presented 17 June 2025", id: "Serial: a4dc68d0-dd3f-44dc-893a-58b09f8825aa",
+    pdf: "assets/certificates/marketing-benefits-vs-features.pdf", image: "assets/certificates/previews/marketing-benefits-vs-features.jpg" }
 ];
+
+/* ==========================================================
+   PRICING (page: #/pricing)
+   Anything inside [square brackets] is a placeholder. It is highlighted on the
+   page so you can spot it. Replace the WHOLE bracket, e.g.
+     pkr: "PKR [Your Price]"  ->  pkr: "PKR 15,000"
+   Edit prices, durations, deliverables and audiences freely. Nothing here is a
+   final price, and no package promises rankings, traffic, leads or sales.
+   ========================================================== */
+
+const PRICING_NOTE = "All prices are placeholders until you confirm them. Final cost depends on the size and scope of your project, and I will confirm the scope with you before any work starts. My work follows good practice, but I cannot guarantee search rankings, traffic, leads or sales.";
+
+/* The Custom Plan card is added automatically to every service below. */
+const PRICING = [
+  {
+    service: "SEO",
+    intro: "Research-led SEO work that tells you what to fix on your website and in what order.",
+    packages: [
+      {
+        tier: "Basic", name: "SEO Starter",
+        pkr: "PKR [Your Price]", usd: "$ [Your Price]", from: true,
+        duration: "[Your duration]",
+        deliverables: [
+          "Keyword research for [number] target keywords",
+          "On-page review of [number] key pages (titles, headings, meta tags)",
+          "Written findings with prioritized fixes",
+          "Action checklist you can follow"
+        ],
+        audience: "Startups and small businesses with a new or small website."
+      },
+      {
+        tier: "Medium", name: "SEO Growth",
+        pkr: "PKR [Your Price]", usd: "$ [Your Price]", from: true,
+        duration: "[Your duration]",
+        deliverables: [
+          "Everything in SEO Starter",
+          "Complete website SEO audit",
+          "Technical SEO check (crawlability, indexing, mobile usability, HTTPS)",
+          "Competitor SEO analysis and keyword mapping",
+          "Image alt text and internal linking recommendations"
+        ],
+        audience: "Service businesses, e-commerce stores and software brands with an established website."
+      },
+      {
+        tier: "Premium", name: "SEO Complete",
+        pkr: "PKR [Your Price]", usd: "$ [Your Price]", from: true,
+        duration: "[Your duration]",
+        deliverables: [
+          "Everything in SEO Growth",
+          "SEO content gap analysis",
+          "On-page optimization of [number] pages",
+          "Off-page strategy plan",
+          "Prioritized SEO action plan and website visibility roadmap",
+          "Review call to walk through the findings"
+        ],
+        audience: "Growing businesses that want a full SEO plan to work from."
+      }
+    ]
+  },
+  {
+    service: "Local SEO",
+    intro: "Help for businesses that serve a specific city or area to be easier to find in local search and on Google Maps.",
+    packages: [
+      {
+        tier: "Basic", name: "Local Starter",
+        pkr: "PKR [Your Price]", usd: "$ [Your Price]", from: true,
+        duration: "[Your duration]",
+        deliverables: [
+          "Local SEO audit of your listings, profile and reviews",
+          "Google Business Profile optimization guidance (categories, description, services)",
+          "Local keyword list",
+          "Action checklist"
+        ],
+        audience: "Single-location businesses such as clinics, salons and restaurants."
+      },
+      {
+        tier: "Medium", name: "Local Growth",
+        pkr: "PKR [Your Price]", usd: "$ [Your Price]", from: true,
+        duration: "[Your duration]",
+        deliverables: [
+          "Everything in Local Starter",
+          "Google Business Profile setup assistance or optimization",
+          "Local competitor analysis",
+          "NAP (name, address, phone) consistency check",
+          "Business description and service text for your profile",
+          "Review response templates"
+        ],
+        audience: "Local businesses that already have a profile and want it to be complete and consistent."
+      },
+      {
+        tier: "Premium", name: "Local Complete",
+        pkr: "PKR [Your Price]", usd: "$ [Your Price]", from: true,
+        duration: "[Your duration]",
+        deliverables: [
+          "Everything in Local Growth",
+          "Local landing-page optimization for [number] pages",
+          "Local citation audit and recommendations",
+          "Google Business Profile post content for [number] posts",
+          "Local SEO content strategy"
+        ],
+        audience: "Businesses with several services or areas that need a full local SEO plan."
+      }
+    ]
+  },
+  {
+    service: "Content Writing",
+    intro: "Original, search-aware writing for your website, blog and product or service pages.",
+    packages: [
+      {
+        tier: "Basic", name: "Content Starter",
+        pkr: "PKR [Your Price]", usd: "$ [Your Price]", from: true,
+        duration: "[Your duration]",
+        deliverables: [
+          "[Number] SEO blog posts or web pages of up to [number] words each",
+          "Meta title and meta description for each piece",
+          "[Number] revision round(s)"
+        ],
+        audience: "Businesses that need a few well-written pieces to get started."
+      },
+      {
+        tier: "Medium", name: "Content Growth",
+        pkr: "PKR [Your Price]", usd: "$ [Your Price]", from: true,
+        duration: "[Your duration]",
+        deliverables: [
+          "Everything in Content Starter",
+          "Keyword research and an SEO content brief for each piece",
+          "Homepage or service-page copywriting",
+          "Proofreading and editing",
+          "[Number] revision round(s)"
+        ],
+        audience: "Businesses publishing regularly or refreshing their main website pages."
+      },
+      {
+        tier: "Premium", name: "Content Complete",
+        pkr: "PKR [Your Price]", usd: "$ [Your Price]", from: true,
+        duration: "[Your duration]",
+        deliverables: [
+          "Everything in Content Growth",
+          "Blog topic research and a content plan",
+          "FAQ content writing",
+          "Product or service descriptions",
+          "Website content refresh and rewriting for [number] pages"
+        ],
+        audience: "Businesses that need a full content plan and ongoing website copy."
+      }
+    ]
+  },
+  {
+    service: "Social Media Marketing",
+    intro: "Planning, profile optimization and content support so your social media presence is consistent and clear.",
+    packages: [
+      {
+        tier: "Basic", name: "Social Starter",
+        pkr: "PKR [Your Price]", usd: "$ [Your Price]", from: true,
+        duration: "[Your duration]",
+        deliverables: [
+          "Social media account audit",
+          "Profile optimization (bio, about section, call-to-action) for [number] platform(s)",
+          "Content pillars for your brand",
+          "Content calendar for [number] posts"
+        ],
+        audience: "Small brands and creators who are just starting to build a presence."
+      },
+      {
+        tier: "Medium", name: "Social Growth",
+        pkr: "PKR [Your Price]", usd: "$ [Your Price]", from: true,
+        duration: "[Your duration]",
+        deliverables: [
+          "Everything in Social Starter",
+          "Monthly content calendar",
+          "Captions with calls to action for [number] posts",
+          "Post ideas matched to your audience",
+          "Engagement strategy (replying to comments and messages)"
+        ],
+        audience: "Food businesses, service providers and brands that post regularly."
+      },
+      {
+        tier: "Premium", name: "Social Complete",
+        pkr: "PKR [Your Price]", usd: "$ [Your Price]", from: true,
+        duration: "[Your duration]",
+        deliverables: [
+          "Everything in Social Growth",
+          "Platform-by-platform social media strategy",
+          "Competitor social media analysis",
+          "Educational and promotional content planning",
+          "Content repurposing plan",
+          "Monthly planning sheet"
+        ],
+        audience: "Brands that want a complete social media plan and ongoing monthly planning."
+      }
+    ]
+  }
+];
+
+/* The extra card shown after the three packages of every service. */
+const CUSTOM_PLAN = {
+  tier: "Custom", name: "Custom Plan",
+  pkr: "Custom Quote", usd: "", from: false,
+  duration: "Agreed with you before work starts",
+  deliverables: [
+    "A mix of services chosen for your goals",
+    "Scope, timeline and deliverables confirmed in writing before work starts",
+    "Can combine services from different categories"
+  ],
+  audience: "Clients whose needs do not fit a standard package."
+};
 
 /* Service-page message template for WhatsApp */
 const WA_TEMPLATE = (service) =>
