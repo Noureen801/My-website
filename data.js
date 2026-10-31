@@ -15,6 +15,38 @@ const SITE = {
   cvFile: "assets/Noreen_Aslam_CV.pdf",      // [PLACEHOLDER] place your CV PDF here
   profilePhoto: "assets/images/Noureen-Digital-Profile.png"   // [PLACEHOLDER] if missing, NA monogram is shown
 };
+const certificates = [
+  {
+    title: "Creative Writing Certificate",
+    file: "assets/Creative Writing Certificate.pdf",
+    image: "assets/creative-writing.png"
+  },
+  {
+    title: "Freelancing Certificate",
+    file: "assets/Freelancing Certificate.pdf",
+    image: "assets/freelancing.png"
+  },
+  {
+    title: "Marketing Benefits Certificate",
+    file: "assets/Marketing Benefits certificate.pdf",
+    image: "assets/marketing-benefits.png"
+  },
+  {
+    title: "SEO Certificate",
+    file: "assets/SEO Certificate.pdf",
+    image: "assets/seo.png"
+  },
+  {
+    title: "Social Media Marketing Certificate",
+    file: "assets/Social media marketing certificate.pdf",
+    image: "assets/social-media-marketing.png"
+  },
+  {
+    title: "Digital Marketing Certificate",
+    file: "assets/6th-file-ka-naam.pdf",
+    image: "assets/6th-image.png"
+  }
+];
 
 const HERO = {
   heading: "<h4>Helping Businesses To Grow Them Through Digital marketing, SEO, Content Writing  & Social media management</h4>",
