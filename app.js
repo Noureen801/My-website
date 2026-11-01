@@ -132,7 +132,7 @@ function projectCard(p) {
     <span class="tag">${p.label}</span>
     <h3>${p.title}</h3>
     <p class="muted">${p.overview}</p>
-    <a class="btn btn-outline" href="#/portfolio/${p.slug}">View Case Study</a>
+    <a class="btn btn-outline" href="#/portfolio/${p.slug}">View Project</a>
   </article>`;
 }
 
