@@ -370,7 +370,7 @@ function renderPricing() {
       <h2>Not sure which package fits?</h2>
       <p class="lead lead-center">Book a call and tell me about your business. We can choose a package together or build a custom plan.</p>
       <div class="btn-group btn-group-center">
-        <a class="btn btn-gold" href="${SITE.calendly}" target="_blank" rel="noopener">Book a Call on Calendly</a>
+        <a class="btn btn-gold" href="${SITE.calendly}" target="_blank" rel="noopener">Schedule free consultation</a>
         <a class="btn btn-whatsapp" href="${waLink("Hello Noreen, I visited your pricing page and would like to discuss a package.")}" target="_blank" rel="noopener">WhatsApp Me</a>
       </div>
     </div>
