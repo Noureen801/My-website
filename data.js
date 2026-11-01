@@ -337,18 +337,64 @@ const EDUCATION = [
    image = a JPG preview of that same PDF (shown in the gallery and the lightbox)
    Until a preview image exists, the card shows a plain "Preview image not added yet" tile. */
 const CERTIFICATES = [
-  { title: "Digital Marketing", category: "Digital Marketing", provider: "DigiSkills.pk / Ignite (Virtual University)", date: "Issued 24 October 2024", id: "3ABEYMMK5",
-    pdf: "assets/digital-marketing.pdf", image: "assets/certificates/previews/digital-marketing.png" },
-  { title: "Freelancing", category: "Professional Freelancing", provider: "DigiSkills.pk / Ignite (Virtual University)", date: "Issued 24 October 2024", id: "G2EPBAKMK",
-    pdf: "assets/certificates/freelancing.pdf", image: "assets/certificates/previews/freelancing.jpg" },
-  { title: "SEO (Search Engine Optimization)", category: "SEO", provider: "DigiSkills.pk / Ignite (Virtual University)", date: "Issued 14 March 2026", id: "9YTNPNYMK",
-    pdf: "assets/certificates/seo.pdf", image: "assets/certificates/previews/seo.jpg" },
-  { title: "Creative Writing", category: "Content Writing", provider: "DigiSkills.pk / Ignite (Virtual University)", date: "Issued 14 March 2026", id: "JSZWMH9MK",
-    pdf: "assets/certificates/creative-writing.pdf", image: "assets/certificates/previews/creative-writing.jpg" },
-  { title: "Social Media Marketing", category: "Social Media Marketing", provider: "HP LIFE / HP Foundation", date: "Presented 28 May 2025", id: "Serial: 38746014-3e54-44d9-9ffc-849ae49cc951",
-    pdf: "assets/certificates/social-media-marketing.pdf", image: "assets/certificates/previews/social-media-marketing.jpg" },
-  { title: "Marketing Benefits vs. Features", category: "Digital Marketing", provider: "HP LIFE / HP Foundation", date: "Presented 17 June 2025", id: "Serial: a4dc68d0-dd3f-44dc-893a-58b09f8825aa",
-    pdf: "assets/certificates/marketing-benefits-vs-features.pdf", image: "assets/certificates/previews/marketing-benefits-vs-features.jpg" }
+  {
+    title: "Digital Marketing",
+    category: "Digital Marketing",
+    provider: "DigiSkills.pk / Ignite (Virtual University)",
+    date: "Issued 24 October 2024",
+    id: "3ABEYMMK5",
+    pdf: "assets/Digital-Marketing-Certificate.pdf",
+    image: "assets/images/Digital-Marketing-Certificate.png"
+  },
+
+  {
+    title: "Freelancing",
+    category: "Professional Freelancing",
+    provider: "DigiSkills.pk / Ignite (Virtual University)",
+    date: "Issued 24 October 2024",
+    id: "G2EPBAKMK",
+    pdf: "assets/Freelancing-Certificate.pdf",
+    image: "assets/images/Freelancing-Certificate.png"
+  },
+
+  {
+    title: "SEO (Search Engine Optimization)",
+    category: "SEO",
+    provider: "DigiSkills.pk / Ignite (Virtual University)",
+    date: "Issued 14 March 2026",
+    id: "9YTNPNYMK",
+    pdf: "assets/SEO-certificate.pdf",
+    image: "assets/images/SEO-certificate.png"
+  },
+
+  {
+    title: "Creative Writing",
+    category: "Content Writing",
+    provider: "DigiSkills.pk / Ignite (Virtual University)",
+    date: "Issued 14 March 2026",
+    id: "JSZWMH9MK",
+    pdf: "assets/Creative-Writing-Certificate.pdf",
+    image: "assets/images/Creative-Writing-Certificate.png"
+  },
+
+  {
+    title: "Social Media Marketing",
+    category: "Social Media Marketing",
+    provider: "HP LIFE / HP Foundation",
+    date: "Presented 28 May 2025",
+    id: "Serial: 38746014-3e54-44d9-9ffc-849ae49cc951",
+    pdf: "assets/Social-media-marketing-certificate.pdf",
+    image: "assets/images/Social-media-marketing-certificate.png"
+  },
+  {
+    title: "Marketing Benefits vs. Features",
+    category: "Digital Marketing",
+    provider: "HP LIFE / HP Foundation",
+    date: "Presented 17 June 2025",
+    id: "Serial: a4dc68d0-dd3f-44dc-893a-58b09f8825aa",
+    pdf: "assets/Marketing-benefits-vs-features-certificate.pdf",
+    image: "assets/images/Marketing-benefits-vs-features-certificate.png"
+  }
 ];
 
 /* ==========================================================
