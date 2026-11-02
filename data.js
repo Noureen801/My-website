@@ -409,11 +409,11 @@ const PRICING = [
     packages: [
       {
         tier: "Basic", name: "Basic",
-        pkr: "PKR [15000]", usd: "$ [55]", from: true,
-        duration: "[Your duration]",
+        pkr: "PKR 15000", usd: "$55", from: true,
+        duration: "5 to 7 days",
         deliverables: [
           "Keyword research for [100] target keywords",
-          "On-page review of [5 t0 10] key pages (titles, headings, meta tags)",
+          "On-page review of 5 t0 10 key pages (titles, headings, meta tags)",
           "Written findings with prioritized fixes",
           "Action checklist you can follow"
         ],
@@ -421,8 +421,8 @@ const PRICING = [
       },
       {
         tier: "Standard", name: "Standard SEO",
-        pkr: "PKR [30,000]", usd: "$ [110]", from: true,
-        duration: "[Your duration]",
+        pkr: "PKR 30,000", usd: "$110", from: true,
+        duration: "10 to 14 days",
         deliverables: [
           "Everything in SEO Basic",
           "Complete website SEO audit",
@@ -433,9 +433,9 @@ const PRICING = [
         audience: "Service businesses, e-commerce stores and software brands with an established website."
       },
       {
-        tier: "Premium", name: "SEO Complete",
-        pkr: "PKR [45,000]", usd: "$ [180]", from: true,
-        duration: "[Your duration]",
+        tier: "Premium", name: "Premium",
+        pkr: "PKR 45,000", usd: "$180", from: true,
+        duration: "15 to 22 days",
         deliverables: [
           "Everything in SEO Growth",
           "SEO content gap analysis",
@@ -454,8 +454,8 @@ const PRICING = [
     packages: [
       {
         tier: "Basic", name: "Basic Local SEO",
-        pkr: "PKR [10,000]", usd: "$ [40", from: true,
-        duration: "[Your duration]",
+        pkr: "PKR 10,000", usd: "$40", from: true,
+        duration: "7 days",
         deliverables: [
           "Local SEO audit of your listings, profile and reviews",
           "Google Business Profile optimization guidance (categories, description, services)",
@@ -466,8 +466,8 @@ const PRICING = [
       },
       {
         tier: "Medium", name: "Medium",
-        pkr: "PKR [20,000]", usd: "$ [75]", from: true,
-        duration: "[Your duration]",
+        pkr: "PKR 20,000", usd: "$ 75", from: true,
+        duration: "14 Days ",
         deliverables: [
           "Everything in Basic Local SEO",
           "Google Business Profile setup assistance or optimization",
@@ -479,14 +479,14 @@ const PRICING = [
         audience: "Local businesses that already have a profile and want it to be complete and consistent."
       },
       {
-        tier: "Premium", name: "Local Complete",
-        pkr: "PKR [35,000]", usd: "$ [125]", from: true,
-        duration: "[Your duration]",
+        tier: "Premium", name: "Premium",
+        pkr: "PKR 35,000", usd: "$ 125", from: true,
+        duration: "30 Days",
         deliverables: [
           "Everything in Local Growth",
-          "Local landing-page optimization for [number] pages",
+          "Local landing-page optimization for 10 pages",
           "Local citation audit and recommendations",
-          "Google Business Profile post content for [number] posts",
+          "Google Business Profile post content for 6 to 7 posts",
           "Local SEO content strategy"
         ],
         audience: "Businesses with several services or areas that need a full local SEO plan."
@@ -498,20 +498,20 @@ const PRICING = [
     intro: "Original, search-aware writing for your website, blog and product or service pages.",
     packages: [
       {
-        tier: "Basic", name: "Content Starter",
-        pkr: "PKR [3000]", usd: "$ [12]", from: true,
-        duration: "[Your duration]",
+        tier: "Basic", name: "Basic",
+        pkr: "PKR 3000", usd: "$ 12", from: true,
+        duration: "2 days ",
         deliverables: [
-          "[2] SEO blog posts or web pages of up to [1000] words each",
+          "[2] SEO blog posts or web pages of up to 1000 words each",
           "Meta title and meta description for each piece",
           "[1] revision round(s)"
         ],
         audience: "Businesses that need a few well-written pieces to get started."
       },
       {
-        tier: "Standard", name: "Content Growth",
-        pkr: "PKR [6000]", usd: "$ [22]", from: true,
-        duration: "[Your duration]",
+        tier: "Standard", name: "Standard",
+        pkr: "PKR 6000", usd: "$ 22", from: true,
+        duration: "3 days",
         deliverables: [
           "Everything in Content Starter",
           "Keyword research and an SEO content brief for each piece",
@@ -522,11 +522,11 @@ const PRICING = [
         audience: "Businesses publishing regularly or refreshing their main website pages."
       },
       {
-        tier: "Premium", name: "Content Complete",
-        pkr: "PKR [10,000]", usd: "$ [36]", from: true,
-        duration: "[Your duration]",
+        tier: "Premium", name: "Premium",
+        pkr: "PKR 10,000", usd: "$ 36", from: true,
+        duration: "4 to 5 days",
         deliverables: [
-          "Everything in Content Growth",
+          "Everything in Standard Plan",
           "Blog topic research and a content plan",
           "FAQ content writing",
           "Product or service descriptions",
@@ -542,8 +542,8 @@ const PRICING = [
     packages: [
       {
         tier: "Basic", name: "Social Starter",
-        pkr: "PKR [12000]", usd: "$ [45]", from: true,
-        duration: "[Your duration]",
+        pkr: "PKR 12000", usd: "$ 45", from: true,
+        duration: "7 Days ",
         deliverables: [
           "Social media account audit",
           "Profile optimization (bio, about section, call-to-action) for [1] platform(s)",
@@ -553,9 +553,9 @@ const PRICING = [
         audience: "Small brands and creators who are just starting to build a presence."
       },
       {
-        tier: "Medium", name: "Social Growth",
-        pkr: "PKR [25000]", usd: "$ [90]", from: true,
-        duration: "[Your duration]",
+        tier: "Medium", name: "Medium",
+        pkr: "PKR 25000", usd: "$ 90", from: true,
+        duration: "15 days",
         deliverables: [
           "Everything in Social Starter",
           "Monthly content calendar",
@@ -566,9 +566,9 @@ const PRICING = [
         audience: "Food businesses, service providers and brands that post regularly."
       },
       {
-        tier: "Premium", name: "Social Complete",
-        pkr: "PKR [40,000]", usd: "$ [140]", from: true,
-        duration: "[Your duration]",
+        tier: "Premium", name: "Premium",
+        pkr: "PKR 40,000", usd: "$ 140", from: true,
+        duration: "one month",
         deliverables: [
           "Everything in Social Growth",
           "Platform-by-platform social media strategy",
@@ -586,9 +586,9 @@ const PRICING = [
     intro: "Clear, complete and consistent profiles on Instagram, LinkedIn, Facebook and Google Business Profile, so visitors quickly understand who you are and what to do next.",
     packages: [
       {
-        tier: "Basic", name: "Profile Starter",
-        pkr: "PKR [5000]", usd: "$ [20]", from: true,
-        duration: "[Your duration]",
+        tier: "Basic", name: "Basic ",
+        pkr: "PKR 5000", usd: "$ 20", from: true,
+        duration: "2 Days",
         deliverables: [
           "Profile audit for [1] platform(s) (Instagram, LinkedIn, Facebook or Google Business Profile)",
           "Rewritten bio, headline or about text for each profile",
@@ -598,11 +598,11 @@ const PRICING = [
         audience: "Freelancers, professionals and small businesses with one main profile to improve."
       },
       {
-        tier: "Standard", name: "Profile Growth",
-        pkr: "PKR [10,000]", usd: "$ [40]", from: true,
-        duration: "[Your duration]",
+        tier: "Standard", name: "Standard",
+        pkr: "PKR 10,000", usd: "$ 40", from: true,
+        duration: "4 Days ",
         deliverables: [
-          "Everything in Profile Starter",
+          "Everything in Basic Plan",
           "Optimization for [2] platforms",
           "Instagram bio, highlights and grid layout guidance",
           "Facebook page info, about section and call-to-action button setup",
@@ -613,8 +613,8 @@ const PRICING = [
       },
       {
         tier: "Premium", name: "Profile Complete",
-        pkr: "PKR [18,000]", usd: "$ [65]", from: true,
-        duration: "[Your duration]",
+        pkr: "PKR 18,000", usd: "$ 65", from: true,
+        duration: "5 to 7 Days ",
         deliverables: [
           "Everything in Profile Growth",
           "All four platforms: Instagram, LinkedIn, Facebook and Google Business Profile",
@@ -631,12 +631,12 @@ const PRICING = [
     intro: "Ongoing help with planning, writing and posting, so your social media accounts stay active and organized.",
     packages: [
       {
-        tier: "Basic", name: "Management Starter",
-        pkr: "PKR [15,000]", usd: "$ 55", from: true,
-        duration: "[Your duration, e.g. per month]",
+        tier: "Basic", name: "Basic",
+        pkr: "PKR 15,000", usd: "$ 55", from: true,
+        duration: "one month",
         deliverables: [
-          "Content planning for [number] platform(s)",
-          "Content calendar for [number] posts per month",
+          "Content planning for 1 platform(s)",
+          "Content calendar for 30 posts per month",
           "Captions for each planned post",
           "Post scheduling",
           "Monthly report"
@@ -644,27 +644,27 @@ const PRICING = [
         audience: "Small businesses and creators who want to post regularly on one platform."
       },
       {
-        tier: "Medium", name: "Management Growth",
-        pkr: "PKR [30,000]", usd: "$ 110", from: true,
-        duration: "[Your duration, e.g. per month]",
+        tier: "Standard", name: "Standard",
+        pkr: "PKR 30,000", usd: "$ 110", from: true,
+        duration: "2 months ",
         deliverables: [
-          "Everything in Management Starter",
-          "Content planning and scheduling for [number] platforms",
-          "[Number] posts per month with captions and calls to action",
+          "Everything in Management Basic plan",
+          "Content planning and scheduling for 2 platforms",
+          "30 posts per month with captions and calls to action",
           "Replies to comments and messages during agreed hours",
           "Monthly report with a summary of activity and engagement"
         ],
         audience: "Businesses that post regularly and want comments and messages handled."
       },
       {
-        tier: "Premium", name: "Management Complete",
+        tier: "Premium", name: "Premium",
         pkr: "PKR [50,000]", usd: "$ 180", from: true,
-        duration: "[Your duration, e.g. per month]",
+        duration: "2 months",
         deliverables: [
-          "Everything in Management Growth",
+          "Everything in standard plan",
           "Monthly content strategy and planning session",
           "Platform-by-platform content plan",
-          "[Number] posts per month across all agreed platforms",
+          "30 posts per month across all agreed platforms",
           "Detailed monthly report with suggestions for the next month"
         ],
         audience: "Brands that want full social media planning and day-to-day management."
