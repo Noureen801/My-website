@@ -218,8 +218,7 @@ const PROJECTS = [
     overview: "A comprehensive SEO audit and keyword research project covering search intent analysis, title tags, meta descriptions, heading optimization, internal linking, and technical SEO recommendations to improve website visibility and search performance.",
     objective: "Presenting a structured SEO audit with clear findings, actionable recommendations, and a prioritized roadmap to improve website performance and search visibility.",
     deliverables: ["Keyword research table", "Search intent mapping", "Title and meta description rewrites", "Heading structure review", "Internal linking opportunities", "Technical SEO checklist", "Prioritized recommendations"],
-    research: "[PLACEHOLDER: add keyword research notes and tool screenshots, clearly labeled as sample data]",
-    recommendations: "[PLACEHOLDER: add prioritized recommendations with before and after examples]"
+    
   },
   {
     slug: "seo-blog-writing",
@@ -230,8 +229,7 @@ const PROJECTS = [
     overview: "An SEO-optimized blog writing project featuring keyword research, search intent analysis, engaging content, meta tags, a structured outline, FAQs, and internal linking recommendations to improve search visibility and deliver value to readers.",
     objective: "Create valuable, reader-focused content that naturally incorporates relevant keywords, aligns with search intent, and supports better search visibility.",
     deliverables: ["Target and supporting keywords", "SEO title and meta description", "Article outline", "Complete article", "Internal linking suggestions", "FAQs", "Content strategy explanation"],
-    research: "[PLACEHOLDER: add search intent analysis for the target keyword]",
-    recommendations: "[PLACEHOLDER: add content refresh and promotion suggestions]"
+    
   },
   {
     slug: "food-brand-social-campaign",
@@ -242,8 +240,7 @@ const PROJECTS = [
     overview: "A food brand social media campaign featuring a 7-day content calendar, a 14-day extended strategy, engaging captions, compelling calls to action, and Facebook and Instagram post creatives designed to boost brand awareness and audience engagement.",
     objective: "Develop a strategic social media campaign for a food business, combining content planning, creative direction, and audience engagement to strengthen brand awareness and encourage customer interaction.",
     deliverables: ["Brand overview and audience", "Content pillars", "Seven-day content calendar", "Fourteen-day extended plan", "Captions and calls to action", "Post mockups", "Engagement strategy"],
-    research: "[PLACEHOLDER: add audience notes for the fictional brand]",
-    recommendations: "[PLACEHOLDER: add creative direction notes]"
+    
   },
   {
     slug: "google-business-profile-local-seo",
@@ -254,8 +251,7 @@ const PROJECTS = [
     overview: "A local SEO optimization project covering Google Business Profile audit, category selection, local keyword research, business description optimization, engaging posts, review response strategies, and a prioritized action plan to improve local search visibility and attract nearby customers.",
     objective: "Demonstrate practical ways to optimize a local business profile, strengthen local search visibility, and build customer trust using accurate business information and ethical SEO practices.",
     deliverables: ["Profile audit checklist", "Primary and secondary category recommendations", "Local keyword research", "Business description", "Service descriptions", "Sample profile posts", "Review response examples", "Competitor analysis template", "Prioritized action plan"],
-    research: "[PLACEHOLDER: add local keyword research for the fictional business]",
-    recommendations: "[PLACEHOLDER: add local landing page recommendations]"
+    
   },
   {
     slug: "website-content-on-page-seo",
@@ -266,8 +262,7 @@ const PROJECTS = [
     overview: "A website content and on-page SEO optimization project featuring content improvements, SEO-friendly title tags and meta descriptions, structured headings, and descriptive image alt text to enhance content quality, user experience, and search visibility.",
     objective: "Demonstrate before-and-after on-page SEO improvements, explaining the purpose behind each change and how it supports better content quality, user experience, and search visibility.",
     deliverables: ["Original sample page content", "Proposed improved content", "Title tag and meta description", "H1 and H2 structure", "Keyword and search intent", "Internal linking recommendations", "Image alt text examples"],
-    research: "[PLACEHOLDER: add keyword and intent notes]",
-    recommendations: "[PLACEHOLDER: add explanation of each improvement]"
+    
   },
   {
     slug: "linkedin-profile-optimization",
@@ -278,8 +273,7 @@ const PROJECTS = [
     overview: "A LinkedIn profile optimization project featuring an improved professional headline, a compelling About section, experience section enhancements, and strategic keyword recommendations to strengthen personal branding and attract relevant career opportunities.",
     objective: "Show how a profile can explain value clearly and be found by recruiters and clients.",
     deliverables: ["Weak sample headline", "Improved headline", "Improved About section", "Experience description examples", "Skills and keyword recommendations", "Banner design concept"],
-    research: "[PLACEHOLDER: add keyword notes for the sample profile]",
-    recommendations: "[PLACEHOLDER: add strategy explanation]"
+    
   },
   {
     slug: "seo-competitor-analysis",
@@ -290,9 +284,8 @@ const PROJECTS = [
     overview: "A competitor analysis project featuring a comparison matrix, keyword opportunities, content gap analysis, competitive strengths and weaknesses, and a prioritized action plan to identify growth opportunities and refine marketing strategy.",
     objective: "Show how competitor research turns into clear opportunities.",
     deliverables: ["Competitor comparison table", "Keyword opportunities", "Content gaps", "Strengths and weaknesses", "Content recommendations", "Prioritized next steps"],
-    research: "[PLACEHOLDER: add sample competitor data, labeled as illustrative]",
-    recommendations: "[PLACEHOLDER: add prioritized next steps]"
-  }
+    
+  },
 ];
 
 /* ==========================================================
@@ -406,7 +399,7 @@ const CERTIFICATES = [
    final price, and no package promises rankings, traffic, leads or sales.
    ========================================================== */
 
-const PRICING_NOTE = "All prices are placeholders until you confirm them. Final cost depends on the size and scope of your project, and I will confirm the scope with you before any work starts. My work follows good practice, but I cannot guarantee search rankings, traffic, leads or sales.";
+const PRICING_NOTE = "All listed prices are indicative and subject to confirmation. Final pricing will depend on your project’s specific requirements, size, and scope. All details will be discussed and agreed upon before work begins. Services are delivered in line with industry best practices; however, specific results, including search rankings, traffic, leads, or sales, cannot be guaranteed.";
 
 /* The Custom Plan card is added automatically to every service below. */
 const PRICING = [
@@ -415,23 +408,23 @@ const PRICING = [
     intro: "Research-led SEO work that tells you what to fix on your website and in what order.",
     packages: [
       {
-        tier: "Basic", name: "SEO Starter",
-        pkr: "PKR [Your Price]", usd: "$ [Your Price]", from: true,
+        tier: "Basic", name: "Basic",
+        pkr: "PKR [15000]", usd: "$ [55]", from: true,
         duration: "[Your duration]",
         deliverables: [
-          "Keyword research for [number] target keywords",
-          "On-page review of [number] key pages (titles, headings, meta tags)",
+          "Keyword research for [100] target keywords",
+          "On-page review of [5 t0 10] key pages (titles, headings, meta tags)",
           "Written findings with prioritized fixes",
           "Action checklist you can follow"
         ],
         audience: "Startups and small businesses with a new or small website."
       },
       {
-        tier: "Medium", name: "SEO Growth",
-        pkr: "PKR [Your Price]", usd: "$ [Your Price]", from: true,
+        tier: "Standard", name: "Standard SEO",
+        pkr: "PKR [30,000]", usd: "$ [110]", from: true,
         duration: "[Your duration]",
         deliverables: [
-          "Everything in SEO Starter",
+          "Everything in SEO Basic",
           "Complete website SEO audit",
           "Technical SEO check (crawlability, indexing, mobile usability, HTTPS)",
           "Competitor SEO analysis and keyword mapping",
@@ -441,12 +434,12 @@ const PRICING = [
       },
       {
         tier: "Premium", name: "SEO Complete",
-        pkr: "PKR [Your Price]", usd: "$ [Your Price]", from: true,
+        pkr: "PKR [45,000]", usd: "$ [180]", from: true,
         duration: "[Your duration]",
         deliverables: [
           "Everything in SEO Growth",
           "SEO content gap analysis",
-          "On-page optimization of [number] pages",
+          "On-page optimization",
           "Off-page strategy plan",
           "Prioritized SEO action plan and website visibility roadmap",
           "Review call to walk through the findings"
@@ -460,8 +453,8 @@ const PRICING = [
     intro: "Help for businesses that serve a specific city or area to be easier to find in local search and on Google Maps.",
     packages: [
       {
-        tier: "Basic", name: "Local Starter",
-        pkr: "PKR [Your Price]", usd: "$ [Your Price]", from: true,
+        tier: "Basic", name: "Basic Local SEO",
+        pkr: "PKR [10,000]", usd: "$ [40", from: true,
         duration: "[Your duration]",
         deliverables: [
           "Local SEO audit of your listings, profile and reviews",
@@ -472,11 +465,11 @@ const PRICING = [
         audience: "Single-location businesses such as clinics, salons and restaurants."
       },
       {
-        tier: "Medium", name: "Local Growth",
-        pkr: "PKR [Your Price]", usd: "$ [Your Price]", from: true,
+        tier: "Medium", name: "Medium",
+        pkr: "PKR [20,000]", usd: "$ [75]", from: true,
         duration: "[Your duration]",
         deliverables: [
-          "Everything in Local Starter",
+          "Everything in Basic Local SEO",
           "Google Business Profile setup assistance or optimization",
           "Local competitor analysis",
           "NAP (name, address, phone) consistency check",
@@ -487,7 +480,7 @@ const PRICING = [
       },
       {
         tier: "Premium", name: "Local Complete",
-        pkr: "PKR [Your Price]", usd: "$ [Your Price]", from: true,
+        pkr: "PKR [35,000]", usd: "$ [125]", from: true,
         duration: "[Your duration]",
         deliverables: [
           "Everything in Local Growth",
@@ -506,38 +499,38 @@ const PRICING = [
     packages: [
       {
         tier: "Basic", name: "Content Starter",
-        pkr: "PKR [Your Price]", usd: "$ [Your Price]", from: true,
+        pkr: "PKR [3000]", usd: "$ [12]", from: true,
         duration: "[Your duration]",
         deliverables: [
-          "[Number] SEO blog posts or web pages of up to [number] words each",
+          "[2] SEO blog posts or web pages of up to [1000] words each",
           "Meta title and meta description for each piece",
-          "[Number] revision round(s)"
+          "[1] revision round(s)"
         ],
         audience: "Businesses that need a few well-written pieces to get started."
       },
       {
-        tier: "Medium", name: "Content Growth",
-        pkr: "PKR [Your Price]", usd: "$ [Your Price]", from: true,
+        tier: "Standard", name: "Content Growth",
+        pkr: "PKR [6000]", usd: "$ [22]", from: true,
         duration: "[Your duration]",
         deliverables: [
           "Everything in Content Starter",
           "Keyword research and an SEO content brief for each piece",
           "Homepage or service-page copywriting",
           "Proofreading and editing",
-          "[Number] revision round(s)"
+          "[1] revision round(s)"
         ],
         audience: "Businesses publishing regularly or refreshing their main website pages."
       },
       {
         tier: "Premium", name: "Content Complete",
-        pkr: "PKR [Your Price]", usd: "$ [Your Price]", from: true,
+        pkr: "PKR [10,000]", usd: "$ [36]", from: true,
         duration: "[Your duration]",
         deliverables: [
           "Everything in Content Growth",
           "Blog topic research and a content plan",
           "FAQ content writing",
           "Product or service descriptions",
-          "Website content refresh and rewriting for [number] pages"
+          "Website content refresh and rewriting for [10] pages"
         ],
         audience: "Businesses that need a full content plan and ongoing website copy."
       }
@@ -549,24 +542,24 @@ const PRICING = [
     packages: [
       {
         tier: "Basic", name: "Social Starter",
-        pkr: "PKR [Your Price]", usd: "$ [Your Price]", from: true,
+        pkr: "PKR [12000]", usd: "$ [45]", from: true,
         duration: "[Your duration]",
         deliverables: [
           "Social media account audit",
-          "Profile optimization (bio, about section, call-to-action) for [number] platform(s)",
+          "Profile optimization (bio, about section, call-to-action) for [1] platform(s)",
           "Content pillars for your brand",
-          "Content calendar for [number] posts"
+          "Content calendar for posts"
         ],
         audience: "Small brands and creators who are just starting to build a presence."
       },
       {
         tier: "Medium", name: "Social Growth",
-        pkr: "PKR [Your Price]", usd: "$ [Your Price]", from: true,
+        pkr: "PKR [25000]", usd: "$ [90]", from: true,
         duration: "[Your duration]",
         deliverables: [
           "Everything in Social Starter",
           "Monthly content calendar",
-          "Captions with calls to action for [number] posts",
+          "Captions with calls to action for 10 posts",
           "Post ideas matched to your audience",
           "Engagement strategy (replying to comments and messages)"
         ],
@@ -574,7 +567,7 @@ const PRICING = [
       },
       {
         tier: "Premium", name: "Social Complete",
-        pkr: "PKR [Your Price]", usd: "$ [Your Price]", from: true,
+        pkr: "PKR [40,000]", usd: "$ [140]", from: true,
         duration: "[Your duration]",
         deliverables: [
           "Everything in Social Growth",
@@ -594,10 +587,10 @@ const PRICING = [
     packages: [
       {
         tier: "Basic", name: "Profile Starter",
-        pkr: "PKR [Your Price]", usd: "$ [Your Price]", from: true,
+        pkr: "PKR [5000]", usd: "$ [20]", from: true,
         duration: "[Your duration]",
         deliverables: [
-          "Profile audit for [number] platform(s) (Instagram, LinkedIn, Facebook or Google Business Profile)",
+          "Profile audit for [1] platform(s) (Instagram, LinkedIn, Facebook or Google Business Profile)",
           "Rewritten bio, headline or about text for each profile",
           "Call-to-action and keyword suggestions",
           "Action checklist you can follow"
@@ -605,22 +598,22 @@ const PRICING = [
         audience: "Freelancers, professionals and small businesses with one main profile to improve."
       },
       {
-        tier: "Medium", name: "Profile Growth",
-        pkr: "PKR [Your Price]", usd: "$ [Your Price]", from: true,
+        tier: "Standard", name: "Profile Growth",
+        pkr: "PKR [10,000]", usd: "$ [40]", from: true,
         duration: "[Your duration]",
         deliverables: [
           "Everything in Profile Starter",
-          "Optimization for [number] platforms",
+          "Optimization for [2] platforms",
           "Instagram bio, highlights and grid layout guidance",
           "Facebook page info, about section and call-to-action button setup",
           "Google Business Profile categories, description and services",
-          "[Number] revision round(s)"
+          "[1] revision round(s)"
         ],
         audience: "Businesses and personal brands that are active on two or three platforms."
       },
       {
         tier: "Premium", name: "Profile Complete",
-        pkr: "PKR [Your Price]", usd: "$ [Your Price]", from: true,
+        pkr: "PKR [18,000]", usd: "$ [65]", from: true,
         duration: "[Your duration]",
         deliverables: [
           "Everything in Profile Growth",
@@ -639,7 +632,7 @@ const PRICING = [
     packages: [
       {
         tier: "Basic", name: "Management Starter",
-        pkr: "PKR [Your Price]", usd: "$ [Your Price]", from: true,
+        pkr: "PKR [15,000]", usd: "$ 55", from: true,
         duration: "[Your duration, e.g. per month]",
         deliverables: [
           "Content planning for [number] platform(s)",
@@ -652,7 +645,7 @@ const PRICING = [
       },
       {
         tier: "Medium", name: "Management Growth",
-        pkr: "PKR [Your Price]", usd: "$ [Your Price]", from: true,
+        pkr: "PKR [30,000]", usd: "$ 110", from: true,
         duration: "[Your duration, e.g. per month]",
         deliverables: [
           "Everything in Management Starter",
@@ -665,7 +658,7 @@ const PRICING = [
       },
       {
         tier: "Premium", name: "Management Complete",
-        pkr: "PKR [Your Price]", usd: "$ [Your Price]", from: true,
+        pkr: "PKR [50,000]", usd: "$ 180", from: true,
         duration: "[Your duration, e.g. per month]",
         deliverables: [
           "Everything in Management Growth",
@@ -690,7 +683,7 @@ const CUSTOM_PLAN = {
     "Scope, timeline and deliverables confirmed in writing before work starts",
     "Can combine services from different categories"
   ],
-  audience: "Clients whose needs do not fit a standard package."
+  audience: "Clients whose needs do not fit any package."
 };
 
 /* Service-page message template for WhatsApp */
