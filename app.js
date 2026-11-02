@@ -246,10 +246,8 @@ function renderCase(slug) {
   <section>
     <div class="container container-narrow">
       ${block("Project overview", `<p>${p.overview}</p>`)}
-      ${block("Objective", `<p>${p.objective}</p>`)}
-      ${block("Research", ph(p.research))}
+      ${block("Objective", `<p>${p.objective}</p>`)} 
       ${block("Deliverables", list(p.deliverables))}
-      ${block("Recommendations", ph(p.recommendations))}
       <div class="btn-group">
         ${waButton(p.title, "Discuss a similar project on WhatsApp")}
         <a class="btn btn-outline" href="#/portfolio">Back to portfolio</a>
