@@ -1,5 +1,5 @@
 /* ==========================================================
-   App logic: hash router, page rendering, filters, forms.
+   App logic: clean-URL router, page rendering, filters, forms.
    Edit content in data.js, not here.
    ========================================================== */
 
@@ -46,14 +46,14 @@ function renderHome() {
         <p class="lead">${HERO.sub}</p>
         <p class="skills-line">${HERO.skillsLine}</p>
         <div class="btn-group">
-          <a class="btn btn-gold" href="#/portfolio">Explore My Work</a>
-          <a class="btn btn-light" href="#/services">Explore My Services</a>
-          <a class="btn btn-whatsapp" href="${waLink("Hello Noreen, I visited your portfolio and would like to discuss a project.")}" target="_blank" rel="noopener">Chat on WhatsApp</a>
+          <a class="btn btn-gold" href="/portfolio">Explore My Work</a>
+          <a class="btn btn-light" href="/services">Explore My Services</a>
+          <a class="btn btn-whatsapp" href="${waLink("Hello Noureen, I visited your portfolio and would like to discuss a project.")}" target="_blank" rel="noopener">Chat on WhatsApp</a>
           <a class="btn btn-light" href="${SITE.cvFile}" download>Download My CV</a>
         </div>
       </div>
       <div class="hero-card">
-        ${photoHTML("avatar", "Noreen Aslam, profile photo")}
+        ${photoHTML("avatar", "Noureen Aslam, profile photo")}
         <h2 class="hero-name">${SITE.name}</h2>
         <p class="role">Digital Marketer</p>
       </div>
@@ -62,11 +62,11 @@ function renderHome() {
 
   <section>
     <div class="container">
-      <div class="section-head"> <h1>Services</h1> <h3>How I Can Help</h3>
-        <p>Explore my services to find the right solution for your needs. Each service includes details about what I offer, what you will receive, and an easy way to connect with me on WhatsApp or Linkedin. It's Upto you</p></div>
+      <div class="section-head"> <h2>Services</h2> <h3>How I Can Help</h3>
+        <p>Explore my services to find the right solution for your needs. Each service includes details about what I offer, what you will receive, and an easy way to connect with me on WhatsApp or LinkedIn.</p></div>
       <div class="grid grid-4">
         ${featuredCats.map(c => `
-          <a class="card card-link reveal" href="#/services/${c.slug}">
+          <a class="card card-link reveal" href="/services/${c.slug}">
             <span class="count">${c.services.length} services</span>
             <h3>${c.name}</h3>
             <p class="muted">${c.short}</p>
@@ -78,35 +78,35 @@ function renderHome() {
 
   <section class="section-alt">
     <div class="container">
-      <div class="section-head"> <h1> Projects </h1> 
+      <div class="section-head"> <h2> Projects </h2> 
         <p>Here is a look at some of my work in SEO, Local SEO, content writing, and social media. Each project reflects my skills, creativity, and focus on helping brands build their online presence and reach the right audience.</p></div>
       <div class="grid grid-3">
         ${featuredProjects.map(projectCard).join("")}
       </div>
-      <p class="mt-24"><a class="btn btn-outline" href="#/portfolio">See all projects</a></p>
+      <p class="mt-24"><a class="btn btn-outline" href="/portfolio">See all projects</a></p>
     </div>
   </section>
 
   <section>
     <div class="container grid grid-2 align-start">
       <div>
-        <h1> About me </h1>
+        <h2> About me </h2>
         <h3>Emerging digital marketer with practical experience in digital marketing journey.</h3>
         <p class="muted">${ABOUT.paragraphs[0]}</p>
-        <p><a href="#/about">Read more about me &rarr;</a></p>
+        <p><a href="/about">Read more about me &rarr;</a></p>
       </div>
       <div>
-        <h1> Experience </h1>
+        <h2> Experience </h2>
         <h3>Recent roles</h3>
         ${EXPERIENCE.map(e => `<div class="card card-gap"><h3>${e.role}</h3><p class="muted">${e.company} | ${e.dates}</p></div>`).join("")}
-        <p><a href="#/experience">View full experience &rarr;</a></p>
+        <p><a href="/experience">View full experience &rarr;</a></p>
       </div>
     </div>
   </section>
 
   <section class="section-alt">
     <div class="container">
-      <div class="section-head"><h1> My Working Process </h1> <h3>How I work with clients</h3></div>
+      <div class="section-head"><h2> My Working Process </h2> <h3>How I work with clients</h3></div>
       <div class="grid grid-4">
         ${PROCESS.map((s, i) => `<div class="card reveal"><div class="step-num">${i + 1}</div><h3>${s.t}</h3><p class="muted">${s.d}</p></div>`).join("")}
       </div>
@@ -114,13 +114,22 @@ function renderHome() {
   </section>
 
   <section>
+    <div class="container">
+      <div class="section-head"><h2>Frequently Asked Questions</h2><h3>Local SEO, answered</h3></div>
+      <div class="grid grid-2">
+        ${FAQ.map(f => `<div class="card"><h3>${f.q}</h3><p class="muted">${f.a}</p></div>`).join("")}
+      </div>
+    </div>
+  </section>
+
+  <section>
     <div class="container text-center">
-      <h1> Contact Me </h1>
+      <h2> Contact Me </h2>
       <h3> Let's Discuss Your Next Project </h3>
-      <p class="lead lead-center">Looking for support with SEO, content writing, local search visibility, or social media planning? Tell me about your goals, and let's explore how I can help You to achievieng your goal.</p>
+      <p class="lead lead-center">Looking for support with local SEO, Google Business Profile optimization, SEO, content writing or social media planning? Tell me about your goals, and let's explore how I can help your business grow.</p>
       <div class="btn-group btn-group-center">
-        <a class="btn btn-gold" href="#/contact">Send a Message</a>
-        <a class="btn btn-whatsapp" href="${waLink("Hello Noreen, I visited your portfolio and would like to discuss a project.")}" target="_blank" rel="noopener">WhatsApp Me</a>
+        <a class="btn btn-gold" href="/contact">Send a Message</a>
+        <a class="btn btn-whatsapp" href="${waLink("Hello Noureen, I visited your portfolio and would like to discuss a project.")}" target="_blank" rel="noopener">WhatsApp Me</a>
       </div>
     </div>
   </section>`;
@@ -132,19 +141,19 @@ function projectCard(p) {
     <span class="tag">${p.label}</span>
     <h3>${p.title}</h3>
     <p class="muted">${p.overview}</p>
-    <a class="btn btn-outline" href="#/portfolio/${p.slug}">View Project</a>
+    <a class="btn btn-outline" href="/portfolio/${p.slug}">View Project</a>
   </article>`;
 }
 
 function renderAbout() {
-  return `${pageHead("<h1> About me </h1>", "<h3>Digital Marketing Driven by Research & Strategy</h3>", "Research-driven digital marketer with practical experience and a focus on SEO,Digital Marketing,Content Writing,content strategy, and continuous learning.", `<a href="#/">Home</a> / About`)}
+  return `${pageHead("About me", "Digital Marketing Driven by Research & Strategy", "Research-driven digital marketer with practical experience and a focus on local SEO, Google Business Profile optimization, SEO, content writing and content strategy.", `<a href="/">Home</a> / About`)}
   <section>
     <div class="container about-grid">
       <div class="about-text">
         ${ABOUT.paragraphs.map(p => `<p class="muted">${p}</p>`).join("")}
         <h2 class="h-md mt-24">Core skills</h2>
         <ol class="skill-list">${SKILLS.map(s => `<li>${s}</li>`).join("")}</ol>
-        <div class="btn-group"><a class="btn btn-gold" href="#/services">View services</a><a class="btn btn-outline" href="${SITE.cvFile}" download>Download CV</a></div>
+        <div class="btn-group"><a class="btn btn-gold" href="/services">View services</a><a class="btn btn-outline" href="${SITE.cvFile}" download>Download CV</a></div>
       </div>
       <aside class="about-photo" aria-label="Profile">
         ${photoHTML("portrait", "Noureen Aslam, digital marketing executive")}
@@ -155,13 +164,13 @@ function renderAbout() {
   </section>
   <section class="section-alt">
     <div class="container">
-      <div class="section-head"> <h1> Working process </h1> <h3> How I Work With Clients</h3></div>
+      <div class="section-head"> <h2> Working process </h2> <h3> How I Work With Clients</h3></div>
       <div class="grid grid-4">${PROCESS.map((s, i) => `<div class="card"><div class="step-num">${i + 1}</div><h3>${s.t}</h3><p class="muted">${s.d}</p></div>`).join("")}</div>
     </div>
   </section>
   <section>
     <div class="container">
-      <div class="section-head"> <h1> Why work with me </h1> <h3>My Approach to Your Growth</h3>
+      <div class="section-head"> <h2> Why work with me </h2> <h3>My Approach to Your Growth</h3>
         <p>Clear communication, research-backed strategies, and practical recommendations focused on your business goals—without unrealistic promises or guaranteed results. I do not promise rankings or results I cannot control.</p></div>
       <div class="grid grid-3">${WHY_ME.map(w => `<div class="card"><h3>${w.t}</h3><p class="muted">${w.d}</p></div>`).join("")}</div>
     </div>
@@ -169,32 +178,32 @@ function renderAbout() {
 }
 
 function renderServicesIndex() {
-  return `${pageHead("<h1> Services </h1>", "<h3> Digital Marketing Services & Tailored Solutions </h3>", "Explore my services in SEO, content writing, social media management, and Google Business Profile optimization. Each service focuses on understanding your business needs, researching opportunities, and providing practical solutions to improve online visibility and connect with your target audience.From keyword research and content planning to profile optimization and SEO improvements, I follow a structured, research-driven approach tailored to your goals.", `<a href="#/">Home</a> / Services`)}
+  return `${pageHead("Services", "Google Business Profile Optimization & Local SEO Services in Pakistan", "Explore my services in local SEO, Google Business Profile optimization, SEO, content writing and social media management. Each service focuses on understanding your business needs, researching opportunities, and providing practical solutions to improve online visibility.", `<a href="/">Home</a> / Services`)}
   <section>
     <div class="container grid grid-3">
       ${SERVICE_CATEGORIES.map(c => `
-        <a class="card card-link reveal" href="#/services/${c.slug}">
+        <a class="card card-link reveal" href="/services/${c.slug}">
           <span class="count">${c.services.length} services</span>
           <h3>${c.name}</h3>
           <p class="muted">${c.short}</p>
           <span class="btn btn-outline">Open category</span>
         </a>`).join("")}
     </div>
-    <p class="muted note-after">Have a project in mind?Let’s discuss your goals and explore how my digital marketing services can support your business growth. <a href="#/contact"></a> or <a href="${waLink("Hello Noreen, I visited your portfolio and I am not sure which service I need. Could we talk?")}" target="_blank" rel="noopener">Let's Connect on Whatsapp</a>.</p>
+    <p class="muted note-after">Have a project in mind?Let’s discuss your goals and explore how my digital marketing services can support your business growth. <a href="/contact"></a> or <a href="${waLink("Hello Noureen, I visited your portfolio and I am not sure which service I need. Could we talk?")}" target="_blank" rel="noopener">Let's Connect on Whatsapp</a>.</p>
   </section>`;
 }
 
 function renderCategory(slug) {
   const cat = SERVICE_CATEGORIES.find(c => c.slug === slug);
   if (!cat) return renderNotFound();
-  return `${pageHead("Service category", cat.name, cat.short, `<a href="#/">Home</a> / <a href="#/services">Services</a> / ${cat.name}`)}
+  return `${pageHead("Service category", cat.name, cat.short, `<a href="/">Home</a> / <a href="/services">Services</a> / ${cat.name}`)}
   <section>
     <div class="container">
       <div class="card mb-30">
         <h3>Typical deliverables</h3>
         <ul>${cat.deliverables.map(d => `<li>${d}</li>`).join("")}</ul>
         <p class="muted mt-10"><strong>Suitable for:</strong> ${cat.audience}</p>
-        <div class="btn-group">${waButton(cat.name, "WhatsApp about this category")}<a class="btn btn-outline" href="#/contact">Send a message</a></div>
+        <div class="btn-group">${waButton(cat.name, "WhatsApp about this category")}<a class="btn btn-outline" href="/contact">Send a message</a></div>
       </div>
       <p class="muted mb-24">${cat.services.length} services in this category.</p>
       ${cat.services.map((s, i) => `
@@ -216,7 +225,7 @@ function renderCategory(slug) {
 const FILTERS = ["All", "SEO", "Local SEO", "Content Writing", "Social Media", "LinkedIn", "Research"];
 
 function renderPortfolio() {
-  return `${pageHead("<h1> Portfolio </h1>", "<h3> Projects & Practical Experience </h3>", "Digital Marketing, SEO, local SEO, Technical SEO, content writing, and social media projects showcasing my skills, research, and practical learning through internship tasks and self-initiated case studies.", `<a href="#/">Home</a> / Portfolio`)}
+  return `${pageHead("Portfolio", "Local SEO & Digital Marketing Projects", "Sample SEO, local SEO, Google Business Profile, content writing and social media projects — including practical work from internships and self-initiated case studies.", `<a href="/">Home</a> / Portfolio`)}
   <section>
     <div class="container">
       <div class="filters" role="group" aria-label="Filter projects by category">
@@ -238,7 +247,7 @@ function renderCase(slug) {
   const ph = (t) => `<p class="placeholder">${t}</p>`;
   return `
   <section class="page-head"><div class="container">
-    <div class="crumbs"><a href="#/">Home</a> / <a href="#/portfolio">Portfolio</a> / ${p.title}</div>
+    <div class="crumbs"><a href="/">Home</a> / <a href="/portfolio">Portfolio</a> / ${p.title}</div>
     <span class="tag tag-gold">${p.label}</span>
     <h1>${p.title}</h1>
     <div class="case-meta"><span>${p.category}</span><span>Portfolio work</span></div>
@@ -250,14 +259,14 @@ function renderCase(slug) {
       ${block("Deliverables", list(p.deliverables))}
       <div class="btn-group">
         ${waButton(p.title, "Discuss a similar project on WhatsApp")}
-        <a class="btn btn-outline" href="#/portfolio">Back to portfolio</a>
+        <a class="btn btn-outline" href="/portfolio">Back to portfolio</a>
       </div>
     </div>
   </section>`;
 }
 
 function renderExperience() {
-  return `${pageHead("<h1> Experience <h1>", "<h3> Professional Experience </h3>", "Hands-on experience in SEO, local SEO, content writing, and digital marketing through Practice and internship roles, with a focus on research, optimization, and online visibility.", `<a href="#/">Home</a> / Experience`)}
+  return `${pageHead("Experience", "SEO & Digital Marketing Experience", "Hands-on experience in SEO, local SEO, content writing and digital marketing through internship roles at SoftCr8ors and Tech Life Fusion, with a focus on research, optimization and online visibility.", `<a href="/">Home</a> / Experience`)}
   <section>
     <div class="container">
       <div class="timeline">
@@ -274,7 +283,7 @@ function renderExperience() {
 }
 
 function renderEducation() {
-  return `${pageHead("<h1> Education and certifications <h1>", "<h3> Academic Background & Certifications </h3> ", "My academic background and completed certifications reflect my commitment to continuous learning and developing practical digital marketing skills.", `<a href="#/">Home</a> / Education`)}
+  return `${pageHead("Education & Certifications", "Education & Digital Marketing Certifications", "BBIT at Virtual University of Pakistan and certifications in digital marketing, SEO and freelancing.", `<a href="/">Home</a> / Education`)}
   <section>
     <div class="container">
       <h2>Education</h2>
@@ -321,7 +330,7 @@ function phText(s) {
 
 function priceCard(svc, p) {
   const isCustom = p.tier === "Custom";
-  const waMsg = `Hello Noreen, I would like a quote for the ${isCustom ? "custom plan" : `${p.name} package`} (${svc}).`;
+  const waMsg = `Hello Noureen, I would like a quote for the ${isCustom ? "custom plan" : `${p.name} package`} (${svc}).`;
   return `<article class="card price-card${isCustom ? " price-card-custom" : ""}">
     <p class="price-tier">${p.tier}</p>
     <p class="price-service-name">${svc}</p>
@@ -346,7 +355,7 @@ function priceCard(svc, p) {
 
 function renderPricing() {
   const filters = ["All", ...PRICING.map(s => s.service)];
-  return `${pageHead("Pricing", "Service Packages & Pricing", "Clear packages for SEO, Local SEO, Content Writing, Social Media Marketing, Profile Optimization and Social Media Management. Every package lists what is included, and you can ask for a custom plan if your needs are different.", `<a href="#/">Home</a> / Pricing`)}
+  return `${pageHead("Pricing", "Service Packages & Pricing", "Clear packages for SEO, Local SEO, Content Writing, Social Media Marketing, Profile Optimization and Social Media Management. Every package lists what is included, and you can ask for a custom plan if your needs are different.", `<a href="/">Home</a> / Pricing`)}
   <section>
     <div class="container">
       <div class="card price-note mb-30"><p class="flush"><strong>How pricing works.</strong> ${PRICING_NOTE}</p></div>
@@ -369,7 +378,7 @@ function renderPricing() {
       <p class="lead lead-center">Book a call and tell me about your business. We can choose a package together or build a custom plan.</p>
       <div class="btn-group btn-group-center">
         <a class="btn btn-gold" href="${SITE.calendly}" target="_blank" rel="noopener">Schedule free consultation</a>
-        <a class="btn btn-whatsapp" href="${waLink("Hello Noreen, I visited your pricing page and would like to discuss a package.")}" target="_blank" rel="noopener">WhatsApp Me</a>
+        <a class="btn btn-whatsapp" href="${waLink("Hello Noureen, I visited your pricing page and would like to discuss a package.")}" target="_blank" rel="noopener">WhatsApp Me</a>
       </div>
     </div>
   </section>`;
@@ -377,7 +386,7 @@ function renderPricing() {
 
 function renderContact() {
   const options = SERVICE_CATEGORIES.map(c => `<option>${c.name}</option>`).join("") + `<option>Not sure yet</option>`;
-  return `${pageHead("<h1> Contact Me </h1>", "<h3> Let's Discuss Your Next Project </h3> ", "Looking for support with SEO, content writing, local search visibility, or social media planning? Tell me about your goals, and let's explore how I can help You to grow your business.", `<a href="#/">Home</a> / Contact`)}
+  return `${pageHead("Contact Me", "Hire a Local SEO Expert in Pakistan", "Looking for support with local SEO, Google Business Profile optimization, SEO, content writing or social media planning? Tell me about your goals, and let's explore how I can help your business grow.", `<a href="/">Home</a> / Contact`)}
   <section>
     <div class="container grid grid-2 align-start">
       <div>
@@ -388,7 +397,7 @@ function renderContact() {
           <li><strong>WhatsApp</strong><a href="${SITE.whatsappLink}" target="_blank" rel="noopener">+92 347 6792159</a></li>
           <li><strong>Location</strong>${SITE.location}</li>
         </ul>
-        <a class="btn btn-whatsapp" href="${waLink("Hello Noreen, I visited your portfolio and would like to discuss a project.")}" target="_blank" rel="noopener">Chat on WhatsApp</a>
+        <a class="btn btn-whatsapp" href="${waLink("Hello Noureen, I visited your portfolio and would like to discuss a project.")}" target="_blank" rel="noopener">Chat on WhatsApp</a>
       </div>
       <div class="card">
         <h2 class="h-md">Send a message</h2>
@@ -419,34 +428,43 @@ function renderContact() {
 
 function renderNotFound() {
   return `${pageHead("Not found", "This page does not exist", "The link may be out of date.", "")}
-  <section><div class="container"><p><a class="btn btn-outline" href="#/">Back to home</a></p></div></section>`;
+  <section><div class="container"><p><a class="btn btn-outline" href="/">Back to home</a></p></div></section>`;
 }
 
 /* ---------- Router ---------- */
 
 const ROUTES = [
-  { re: /^\/?$/, render: renderHome, title: "Noureen Aslam | Digital Marketing Executive, SEO & Content", desc: "Noureen Aslam, Digital Marketing Executive offering SEO, local SEO, social media and content writing." },
-  { re: /^\/about$/, render: renderAbout, title: "About | Noureen Aslam", desc: "About Noureen Aslam, a research-driven digital marketing professional." },
-  { re: /^\/services$/, render: renderServicesIndex, title: "Services | Noreen Aslam", desc: "SEO, local SEO, content writing and social media services." },
-  { re: /^\/services\/([a-z-]+)$/, render: (m) => renderCategory(m[1]), title: "Services | Noureen Aslam", desc: "Detailed service list for Noureen Aslam." },
-  { re: /^\/pricing$/, render: renderPricing, title: "Pricing | Noureen Aslam", desc: "Service packages for SEO, local SEO, content writing, social media marketing, profile optimization and social media management, with a custom plan option." },
-  { re: /^\/portfolio$/, render: renderPortfolio, title: "Portfolio | Noureen Aslam", desc: "Sample SEO, local SEO, content and social media projects. Demo projects are labeled." },
-  { re: /^\/portfolio\/([a-z-]+)$/, render: (m) => renderCase(m[1]), title: "Case Study | Noureen Aslam", desc: "Case study by Noureen Aslam." },
-  { re: /^\/experience$/, render: renderExperience, title: "Experience | Noureen Aslam", desc: "Internship experience in SEO and digital marketing." },
-  { re: /^\/education$/, render: renderEducation, title: "Education and Certifications | Noureen Aslam", desc: "Education and certifications." },
-  { re: /^\/contact$/, render: renderContact, title: "Contact | Noureen Aslam", desc: "Contact Noureen Aslam by WhatsApp, email or LinkedIn." }
+  { re: /^\/?$/, render: renderHome, title: "Noureen Aslam | Local SEO Expert Pakistan & SEO Executive", desc: "Local SEO expert in Pakistan. Noureen Aslam helps B2B SaaS & local businesses rank higher on Google Maps with Google Business Profile optimization, SEO, content & social media." },
+  { re: /^\/about$/, render: renderAbout, title: "About Noureen Aslam | Local SEO Expert Pakistan", desc: "About Noureen Aslam — Digital Marketing Executive and Local SEO expert in Gujranwala, Pakistan, helping B2B SaaS & local businesses grow on Google." },
+  { re: /^\/services$/, render: renderServicesIndex, title: "Google Business Profile & Local SEO Services | Noureen Aslam", desc: "Local SEO, Google Business Profile optimization, SEO, content writing and social media services in Pakistan." },
+  { re: /^\/services\/([a-z-]+)$/, render: (m) => renderCategory(m[1]), title: (m) => { const c = SERVICE_CATEGORIES.find(x => x.slug === m[1]); return (c ? c.name : "Services") + " | Noureen Aslam"; }, desc: (m) => { const c = SERVICE_CATEGORIES.find(x => x.slug === m[1]); return c ? c.name + " services in Pakistan by Noureen Aslam. " + c.short : "Detailed service list for Noureen Aslam."; } },
+  { re: /^\/pricing$/, render: renderPricing, title: "Local SEO Packages & Pricing in Pakistan | Noureen Aslam", desc: "Local SEO and digital marketing packages in Pakistan — one-time projects from PKR 25,000, monthly plans from PKR 40,000." },
+  { re: /^\/portfolio$/, render: renderPortfolio, title: "Local SEO Projects & Case Studies | Noureen Aslam", desc: "Sample SEO, local SEO and Google Business Profile projects by Noureen Aslam." },
+  { re: /^\/portfolio\/([a-z-]+)$/, render: (m) => renderCase(m[1]), title: (m) => { const x = PROJECTS.find(y => y.slug === m[1]); return (x ? x.title : "Case Study") + " | Noureen Aslam"; }, desc: (m) => { const x = PROJECTS.find(y => y.slug === m[1]); return x ? x.title + " — local SEO case study by Noureen Aslam." : "Case study by Noureen Aslam."; } },
+  { re: /^\/experience$/, render: renderExperience, title: "SEO Experience | Noureen Aslam", desc: "SEO and digital marketing experience — SEO Executive at SoftCr8ors, Digital Marketing Intern at Tech Life Fusion." },
+  { re: /^\/education$/, render: renderEducation, title: "Education & Certifications | Noureen Aslam", desc: "BBIT at Virtual University of Pakistan and digital marketing certifications." },
+  { re: /^\/contact$/, render: renderContact, title: "Contact Noureen Aslam | Local SEO Expert Pakistan", desc: "Contact Noureen Aslam for local SEO, Google Business Profile optimization and digital marketing — WhatsApp, email or LinkedIn." }
 ];
 
 function currentPath() {
-  const hash = window.location.hash.replace(/^#/, "");
-  const path = hash.split("?")[0];
-  return path.startsWith("/") ? path : "/" + path;
+  let path = window.location.pathname.split("?")[0];
+  if (path.length > 1 && path.endsWith("/")) path = path.slice(0, -1);
+  return path === "" ? "/" : path;
 }
 
 function setMeta(title, desc) {
   document.title = title;
   const meta = document.querySelector('meta[name="description"]');
   if (meta) meta.setAttribute("content", desc);
+  const url = "https://noureenportfolio.vercel.app" + (currentPath() === "/" ? "/" : currentPath());
+  const canonical = document.querySelector('link[rel="canonical"]');
+  if (canonical) canonical.setAttribute("href", url);
+  const ogUrl = document.querySelector('meta[property="og:url"]');
+  if (ogUrl) ogUrl.setAttribute("content", url);
+  const ogTitle = document.querySelector('meta[property="og:title"]');
+  if (ogTitle) ogTitle.setAttribute("content", title);
+  const ogDesc = document.querySelector('meta[property="og:description"]');
+  if (ogDesc) ogDesc.setAttribute("content", desc);
 }
 
 function setActiveNav(path) {
@@ -459,15 +477,15 @@ function setActiveNav(path) {
 
 function route() {
   const path = currentPath();
-  let html = null, meta = null;
+  let html = null, meta = null, m = null;
   for (const r of ROUTES) {
-    const m = path.match(r.re);
+    m = path.match(r.re);
     if (m) { html = r.render(m); meta = r; break; }
   }
   if (!html) { html = renderNotFound(); meta = { title: "Not found | Noureen Aslam", desc: "Page not found." }; }
   closeLightbox();
   app.innerHTML = html;
-  setMeta(meta.title, meta.desc);
+  setMeta(typeof meta.title === "function" ? meta.title(m) : meta.title, typeof meta.desc === "function" ? meta.desc(m) : meta.desc);
   setActiveNav(path);
   window.scrollTo({ top: 0, behavior: "auto" });
   app.focus({ preventScroll: true });
@@ -676,5 +694,10 @@ document.addEventListener("keydown", (e) => {
 document.getElementById("cv-float").href = SITE.cvFile;
 
 document.getElementById("year").textContent = new Date().getFullYear();
-window.addEventListener("hashchange", route);
-route();
+// Legacy hash URLs (#/about) redirect once to clean URLs (/about)
+if (window.location.hash.startsWith("#/")) {
+  window.location.replace(window.location.hash.slice(1).split("?")[0] || "/");
+} else {
+  window.addEventListener("popstate", route);
+  route();
+}

@@ -5,9 +5,9 @@
 
 const SITE = {
   name: "Noureen Aslam",
-  title: "<h2>Digital Marketing Executive | SEO Executive | Content Writer | Social Media Manager & Marketer</h2> ",
+  title: "Digital Marketing Executive | SEO Executive | Content Writer | Social Media Manager & Marketer",
   email: "noureenaslam73@gmail.com",
-  linkedin: "https://www.linkedin.com/in/noureen-digitalmarketing/",
+  linkedin: "https://www.linkedin.com/in/noureen-digitalmarketer/",
   whatsappNumber: "923476792159",
   whatsappLink: "https://wa.me/923476792159",
   location: "Gujranwala, Punjab, Pakistan",
@@ -18,8 +18,8 @@ const SITE = {
 
 
 const HERO = {
-  heading: "<h4>Helping Businesses To Grow Them Through Digital marketing, SEO, Content Writing  & Social media management</h4>",
-  sub: "I help businesses strengthen their online presence through search-focused content, practical SEO strategies, local search optimization, and thoughtful social media planning.",
+  heading: "Local SEO Expert in Pakistan Helping Businesses Rank Higher on Google",
+  sub: "I help B2B SaaS and local businesses in Pakistan and worldwide strengthen their online visibility — with local SEO, Google Business Profile optimization, SEO content and social media marketing.",
   skillsLine: "Digital Marketing| SEO | Content Writing | Local SEO | Google Business Profile | Social Media Management"
 };
 
@@ -36,10 +36,10 @@ const SKILLS = [
 
 const ABOUT = {
   paragraphs: [
-    "I am a creative and passionate individual who loves turning ideas into reality through technology and design. I have 1 year of experience in my field, during which I’ve learned, worked on different projects, and continued to improve my skills.",
-    "My journey has been all about learning new things, exploring creative ideas, solving problems, and growing with every experience. I believe that every project is an opportunity to learn something new and become better at what I do.",
-    "I enjoy creating things that are not only visually appealing but also meaningful, user-friendly, and effective. I am always looking for new challenges, opportunities to grow, and ways to turn my ideas into something valuable.",
-    "This portfolio represents my journey, my skills, and the work I have put my heart into over time. I am still learning, still growing, and excited to see where my journey takes me next."
+    "I am Noureen Aslam, a Digital Marketing Executive and Local SEO expert based in Gujranwala, Pakistan. I help B2B SaaS and software companies strengthen their online visibility — and local businesses get found on Google Maps by nearby customers.",
+    "My work covers local SEO, Google Business Profile optimization, SEO, content writing and social media marketing. Every project starts with research — keywords, competitors and the audience — before any work begins.",
+    "I believe in honest, practical marketing: clear communication, work you can check, and no promised rankings I cannot control. If a result cannot be guaranteed, I say so before we start.",
+    "This portfolio shows my services, sample projects and experience. If you want your business to show up higher on Google, take a look around — and when you are ready, let’s talk."
   ]
 };
 
@@ -235,7 +235,7 @@ const PROJECTS = [
     slug: "food-brand-social-campaign",
     title: "Food Brand Social Media Campaign",
     category: "Social Media",
-    label: "Food compaign Project",
+    label: "Food Campaign Project",
     thumb: "Food Campaign",
     overview: "A food brand social media campaign featuring a 7-day content calendar, a 14-day extended strategy, engaging captions, compelling calls to action, and Facebook and Instagram post creatives designed to boost brand awareness and audience engagement.",
     objective: "Develop a strategic social media campaign for a food business, combining content planning, creative direction, and audience engagement to strengthen brand awareness and encourage customer interaction.",
@@ -687,5 +687,14 @@ const CUSTOM_PLAN = {
 };
 
 /* Service-page message template for WhatsApp */
+
+/* FAQ: shown on the homepage and marked up with FAQPage schema in index.html */
+const FAQ = [
+  { q: "What is local SEO?", a: "Local SEO is the process of improving a business's visibility in local Google search results and on Google Maps, so nearby customers find it first. It includes Google Business Profile optimization, local keywords, reviews and local citations." },
+  { q: "How much does local SEO cost in Pakistan?", a: "It depends on the business and its goals. My one-time projects start at PKR 25,000 and monthly plans start at PKR 40,000. Every project starts with a free mini-audit — contact me for an exact quote." },
+  { q: "How long does local SEO take to show results?", a: "Most businesses see movement in 2 to 4 months, depending on competition and the starting point. I never promise guaranteed rankings — I report real progress every month." },
+  { q: "Do you work with SaaS companies?", a: "Yes. I help B2B SaaS and software companies strengthen their online visibility with SEO, content and LinkedIn marketing, alongside local SEO for local businesses." }
+];
+
 const WA_TEMPLATE = (service) =>
-  `Hello Noreen, I visited your portfolio and would like to discuss your ${service} service.`;
+  `Hello Noureen, I visited your portfolio and would like to discuss your ${service} service.`;

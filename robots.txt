@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://noureenportfolio.vercel.app/sitemap.xml
